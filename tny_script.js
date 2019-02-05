@@ -4,8 +4,7 @@
    Tutorial Case
 
    Countdown Clock
-   Author: 
-   Date:   
+   Author: Diego Sandoval
+   Date:   2/5/19
 
 */
-
