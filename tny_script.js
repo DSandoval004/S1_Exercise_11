@@ -30,6 +30,7 @@ function runClock() {
     var nextYear = currentDay.getFullYear() + 1;
     newYear.setFullYear(nextYear);
     var daysLeft = (newYear - currentDay) / (1000 * 60 * 60 * 24);
+    // var daysLeft = 1;
 
     /* Calculate the hours left in the current day */
     var hrsLeft = (daysLeft - Math.floor(daysLeft)) * 24;
@@ -43,4 +44,19 @@ function runClock() {
     document.getElementById("hrs").textContent = Math.floor(hrsLeft);
     document.getElementById("mins").textContent = Math.floor(minsLeft);
     document.getElementById("secs").textContent = Math.floor(secsLeft);
+
+    // !ADDED, NOT IN BOOK!
+    // Progress bar
+    // Calculates days gone by until January, 1
+    var timePassed = 365 - daysLeft;
+    // Calculates the width that the progress bar should be
+    var progressBarWidth = (timePassed / 365) * 100;
+    // Sets the percentage width of the progress bar
+    document.getElementById("cdBar").style.width = progressBarWidth + "%";
+    console.log(currentDay);
+
+    // Debug commands I used
+    // console.log(daysLeft + "dl")
+    // console.log(timeleft + "tl");
+    // console.log(progressBarWidth + "pbw");
 }
